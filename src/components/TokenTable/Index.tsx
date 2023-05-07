@@ -4,7 +4,7 @@ import { classNames } from "@/utils/classNames";
 import { useEffect, useState } from "react"
 import { ChainSelector } from "../ChainSelector/Index";
 import { IoSearchCircleOutline } from "react-icons/io5";
-import { formatEth, formatEthDecimals } from "@/utils/chainDisplayUtils";
+import { formatEth } from "@/utils/chainDisplayUtils";
 import { TokenDataItem } from "@/types/tokenDataItem";
 import Image from "next/image";
 import { formatLargeUsd } from "@/utils/currency";

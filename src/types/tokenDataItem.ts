@@ -1,35 +1,22 @@
+interface MetricAggregationItem {
+    "1d": number,
+    "7d": number,
+    "30d": number,
+    "90d": number,
+    "180d": number,
+    "365d": number,
+}
 interface MetricAggregation {
     sums: any;
-    trends: {
-        "1d": number,
-        "7d": number,
-        "30d": number,
-        "90d": number,
-        "180d": number,
-        "365d": number,
-    };
+    trends: MetricAggregationItem,
     values: {
         "ath": number,
         "atl": number,
         "max": number,
         "latest": number,
     },
-    changes: {
-        "1d": number,
-        "7d": number,
-        "30d": number,
-        "90d": number,
-        "180d": number,
-        "365d": number,
-    },
-    averages: {
-        "1d": number,
-        "7d": number,
-        "30d": number,
-        "90d": number,
-        "180d": number,
-        "365d": number,
-    }
+    changes: MetricAggregationItem,
+    averages: MetricAggregationItem,
 }
 
 interface TokenDataItemMetricAggregations {
