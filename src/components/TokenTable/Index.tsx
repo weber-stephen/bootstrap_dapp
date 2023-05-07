@@ -20,7 +20,7 @@ export default function TokenTable() {
     setFilteredTokens(data);
   };
 
-  const trendDisplay = (input:object,prepend:string = '',time: string = '1d') => {
+  const trendDisplay = (input:any,prepend:string = '',time: string = '1d') => {
     const d1 = input['1d'];
     const d90 = input['90d'];
     let latest = input[time];

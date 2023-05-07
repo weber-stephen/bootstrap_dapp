@@ -129,7 +129,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="py-6">
-                <ChainSelector />
+                <ChainSelector expanded={false}/>
               </div>
               <div className="py-6">
                 <WalletConnect />

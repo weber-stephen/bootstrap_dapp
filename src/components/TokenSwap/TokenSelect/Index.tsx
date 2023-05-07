@@ -2,6 +2,7 @@ import Image from 'next/image';
 import './TokenSelect.module.scss';
 import { HiChevronDown } from "react-icons/hi2";
 import classNames from 'classnames';
+import { SwapToken } from '@/types/swapTokens';
 
 interface TokenSelectProps {
   token: SwapToken | undefined;
