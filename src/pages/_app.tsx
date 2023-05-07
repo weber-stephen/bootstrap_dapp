@@ -22,6 +22,22 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
     <Head>
+      <title>Bootstrap dApp</title>
+      <meta name="description" content="An open-source Next.js dApp to help you get started with your next web3 project." />
+
+      <meta property="og:url" content="https://bootstrap-dapp.vercel.app/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Bootstrap dApp" />
+      <meta property="og:description" content="An open-source Next.js dApp to help you get started with your next web3 project." />
+      <meta property="og:image" content="https://bootstrap-dapp.s3.us-west-1.amazonaws.com/opengraph.png" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="bootstrap-dapp.vercel.app" />
+      <meta property="twitter:url" content="https://bootstrap-dapp.vercel.app/" />
+      <meta name="twitter:title" content="Bootstrap dApp" />
+      <meta name="twitter:description" content="An open-source Next.js dApp to help you get started with your next web3 project." />
+      <meta name="twitter:image" content="https://bootstrap-dapp.s3.us-west-1.amazonaws.com/opengraph.png" />
+        
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className='min-h-full'>
