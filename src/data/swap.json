@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Ether",
+        "slug": "ETH",
+        "address": "0x0000000000000000000000000000000000000000",
+        "logo": "/tokens/eth.webp"
+    },
+    {
+        "name": "USDC",
+        "slug": "USDC",
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "logo": "/tokens/usdc.png"
+    },
+    {
+        "name": "Tether USD",
+        "slug": "USDT",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "logo": "/tokens/usdt.png"
+    },
+    {
+        "name": "Dai Stablecoin",
+        "slug": "DAI",
+        "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "logo": "/tokens/dai.png"
+    },
+    {
+        "name": "Compound",
+        "slug": "COMP",
+        "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "logo": "/tokens/comp.png"
+    },
+    {
+        "name": "Arbitrum",
+        "slug": "ARB",
+        "address": "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
+        "logo": "/tokens/arb.png"
+    }
+]
