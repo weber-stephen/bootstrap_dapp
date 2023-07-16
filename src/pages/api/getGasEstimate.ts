@@ -4,13 +4,13 @@ import axios from 'axios';
 import { ErrorResponse } from '@/utils/errors';
 // import { ethers } from 'ethers';
 
-export type DataResponse = {
+export type GetGasDataResponse = {
     gasPrice?: number;
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<DataResponse | ErrorResponse>
+  res: NextApiResponse<GetGasDataResponse | ErrorResponse>
 ) {
 
   if(req.query.tokenAddress) {
