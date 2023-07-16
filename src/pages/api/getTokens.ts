@@ -2,18 +2,35 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import tokenData from '../../data/tokens.json';
 import { TokenDataItem } from '@/types/tokenDataItem';
+import { ErrorResponse, getExceptionMessage, getExceptionStack, getExceptionStatus } from '@/utils/errors';
 
-type Data = {
+type DataResponse = {
   data: TokenDataItem[]
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<DataResponse | ErrorResponse>
 ) {
-  const data = tokenData.data as TokenDataItem[];
+  try {
+    const data = tokenData.data as TokenDataItem[];
+  
+    res.status(200).json({
+      data
+    });
+  } catch(error) {
 
-  res.status(200).json({
-    data
-  });
+    const status = getExceptionStatus(error);
+    const message = getExceptionMessage(error);
+    const stack = getExceptionStack(error);
+
+    if (stack) {
+      // eslint-disable-next-line no-console
+      console.debug(stack);
+    }
+
+    return res.status(status).json({
+      error: message
+    });
+  }
 }

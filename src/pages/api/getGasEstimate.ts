@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import axios from 'axios';
+import { ErrorResponse } from '@/utils/errors';
 // import { ethers } from 'ethers';
 
-export type GasEstimateResponse = {
+export type DataResponse = {
     gasPrice?: number;
-    error?: string;
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<GasEstimateResponse>
+  res: NextApiResponse<DataResponse | ErrorResponse>
 ) {
 
   if(req.query.tokenAddress) {
