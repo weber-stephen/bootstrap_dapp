@@ -35,6 +35,15 @@ Start the server
   yarn dev
 ```
 
+## Running Storybook
+[Storybook](https://storybook.js.org/) is a frontend workshop for building UI components and pages in isolation.
+
+To run storybook:
+
+```
+yarn storybook
+```
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your `.env` file

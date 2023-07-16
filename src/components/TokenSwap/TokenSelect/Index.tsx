@@ -3,6 +3,7 @@ import './TokenSelect.module.scss';
 import { HiChevronDown } from "react-icons/hi2";
 import classNames from 'classnames';
 import { SwapToken } from '@/types/swapTokens';
+import { Button } from '@/components/Button/Index';
 
 interface TokenSelectProps {
   token: SwapToken | undefined;
@@ -12,7 +13,7 @@ interface TokenSelectProps {
 export default function TokenSelect({token, onSelect}: TokenSelectProps) {
   return (
     <div className='absolute top-[16px] right-[10px]'>
-      <button
+      <Button
         onClick={onSelect}
         type="button"
         className={classNames(
@@ -31,7 +32,7 @@ export default function TokenSelect({token, onSelect}: TokenSelectProps) {
         {!token && (
           <span>Select Token</span>
         )}
-      </button>
+      </Button>
     </div>
   )
 }

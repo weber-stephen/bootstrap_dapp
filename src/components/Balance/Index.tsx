@@ -19,6 +19,7 @@ export default function Balance({address, selectedTokenAddress, balanceLoaded}: 
 
   useEffect(() => {
     if(data) {
+      console.log(data);
       if(balanceLoaded) {
         balanceLoaded(data?.formatted);
       }

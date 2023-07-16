@@ -8,17 +8,18 @@ import '@/styles/globals.scss'
 import Footer from '@/components/Footer/Index';
 import Head from 'next/head';
 
+const { chains, provider } = configureChains(
+  [mainnet],
+  [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_KEY || "" })],
+)
+export const wagmiClient = createClient({
+  autoConnect: true,
+  connectors: [new InjectedConnector({ chains })],
+  provider,
+})
+
 export default function App({ Component, pageProps }: AppProps) {
 
-  const { chains, provider } = configureChains(
-    [mainnet],
-    [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_KEY || "" })],
-  )
-  const client = createClient({
-    autoConnect: true,
-    connectors: [new InjectedConnector({ chains })],
-    provider,
-  })
   return (
     <>
     <Head>
@@ -41,7 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className='min-h-full'>
-      <WagmiConfig client={client}>
+      <WagmiConfig client={wagmiClient}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
