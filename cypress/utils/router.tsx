@@ -18,6 +18,7 @@ const createRouter = (params: Partial<NextRouter>) => ({
     off: cy.spy().as('off'),
     on: cy.spy().as('on'),
   },
+  forward: () => {},
   isFallback: false,
   isLocaleDomain: false,
   isReady: true,
